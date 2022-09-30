@@ -1,0 +1,6 @@
+*.ppt
+*.ipynb
+*.pdf
+*.doc
+*.pyc
+**/hilo
