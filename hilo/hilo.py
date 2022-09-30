@@ -1,16 +1,6 @@
 from cards import Cards
 
 class Director:
-    """A person who directs the game. 
-    
-    The responsibility of a Director is to control the sequence of play.
-
-    Attributes:
-        dice (List[Die]): A list of Die instances.
-        is_playing (boolean): Whether or not the game is being played.
-        score (int): The score for one round of play.
-        total_score (int): The score for the entire game.
-    """
 
     def __init__(self):
         """Constructs a new Director.
@@ -35,7 +25,13 @@ class Director:
             self.do_outputs()
 
     def get_inputs(self, cards):
-            cards.play_cards()
+        """Gets the input from the user and run the play_cards function
+        
+        Args:
+            self (Director): an instance of Director.
+            cards (class): the Cards class created on cards.py
+        """
+        cards.play_cards()
 
     def do_updates(self, cards):
         """Updates the player's score.
@@ -54,7 +50,7 @@ class Director:
             self.score -= 75
 
     def do_outputs(self):
-        """Displays the dice and the score. Also asks the player if they want to roll again. 
+        """Displays the the score. Also asks the player if they want to play again. 
 
         Args:
             self (Director): An instance of Director.
